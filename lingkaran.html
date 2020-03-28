@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Grafikom &mdash; Algoritma Pembentuk Poligon</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700|Indie+Flower" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="css/aos.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+    <div class="site-wrap" id="home-section">
+
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+
+
+
+        <header class="site-navbar site-navbar-target" role="banner">
+
+
+            <div class="container">
+                <div class="menu-wrap d-flex align-items-center">
+                    <span class="d-inline-block d-lg-none"><a href="#"
+                            class="text-black site-menu-toggle js-menu-toggle py-5"><span
+                                class="icon-menu h3 text-black"></span></a></span>
+
+
+
+                    <nav class="site-navigation text-left mr-auto d-none d-lg-block" role="navigation">
+                        <ul class="site-menu main-menu js-clone-nav mr-auto ">
+                            <li><a href="index.html" class="nav-link">Home</a></li>
+                            <li class="active"><a href="lingkaran.html" class="nav-link">Lingkaran</a></li>
+                            <li><a href="segitiga.html" class="nav-link">Segitiga</a></li>
+                            <li><a href="persegi.html" class="nav-link">Persegi</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div class="ftco-blocks-cover-1">
+            <div class="site-section-cover overlay" data-stellar-background-ratio="0.5"
+                style="background-image: url('images/lingkaran.jpg')">
+                <div class="container">
+                    <div class="row align-items-center ">
+
+                        <div class="col-md-5 mt-5 pt-5">
+                            <h1 class="mb-3 font-weight-bold text-teal">Algoritma Pembentuk Lingkaran</h1>
+                            <p><a href="index.html" class="text-white">Home</a> <span class="mx-3">/</span>
+                                <strong>Lingkaran</strong></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="site-section">
+            <div class="container">
+                <div class="col-md-12">
+                    <h2 class="text-black text-center mb-10">Algoritma MidPoint/Bressenham</h2>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-4">
+                        <p>Pada dasarnya, mirip dengan penggambaran garis, algoritma penggambaran lingkaran
+                            pun berusaha mencari solusi optimal sedemikian rupa sehingga lingkaran yang dibentuk
+                            adalah sesempurna mungkin. Gambar di samping ini memberikan ilustrasi penggambaran
+                            lingkaran.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="images/ilustrasi_lingkaran.PNG" alt="Image" class="img-fluid">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="images/ilustrasi_lingkaran2.PNG" alt="Image" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="site-section">
+            <div class="container">
+                <div class="col-md-12">
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-4">
+                        <h2 class="text-black">Simetris Delapan Titik</h2>
+                        <p>Proses pembuatan lingkaran dapat dilakukan dengan menentukan satu titik awal. Bila titik
+                            awal pada lingkaran (x,y), maka terdapat tiga posisi lain, sehingga dapat diperoleh delapan
+                            titik. Dengan demikian, hanya diperlukan untuk menghitung segmen 45o dalam menentukan
+                            lingkaran selengkapnya</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2 class="text-black">Delapan titik simetris yaitu:</h2>
+                        <ul>
+                            <li>Kuadran I (x,y),(y,x)</li>
+                            <li>Kuadran II (-x,y),(-y,x)</li>
+                            <li>Kuadran III (-x,-y),(-y-x)</li>
+                            <li>Kuadran IV (x,-y),(y,-x)</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="images/ilustrasi_lingkaran3.PNG" alt="Image" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="site-section">
+            <div class="container">
+                <div class="col-md-12">
+                    <h2 class="text-black text-center mb-10">Langkah-langkah Pembentukan Lingkaran</h2>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-12">
+                        <p>
+                            <ol>
+                                <li>Tentukan radius r dengan titik pusat lingkaran (xc,yc) kemudian diperoleh (xc,yc)=
+                                    0,r).</li>
+                                <li>Hitung nilai dari parameter P0 = 1-r</li>
+                                <li>Tentukan nilai awal k = 0, untuk setiap posisi xk berlaku sbb : <br> a. Bila pk
+                                    kurang dari 0, maka titik selanjutnya adalah (xk+1,yk) <br> Pk+1 = pk +2xk+1+1 <br>
+                                    b. Bila pk >0, maka titik selanjutnya adalah (xk+1,yk-1) <br> Pk+1 = pk +2 xk+1+1 -
+                                    2
+                                    yk+1 <br> Dimana 2 xk+1 = 2 xk + 2 dan 2 yk+1 = 2 yk – 2 </li>
+                                <li>Tentukan titik simetris pada ketujuh oktan yang lain. </li>
+                                <li>Gerakkan setiap posisi pixel (x,y) pada garis melingkar dari lingkaran dengan titik
+                                    pusat (xc,yc) dan tentukan nilai koordinat : x= x + xc dan y = y + yc </li>
+                                <li>Ulangi langkah ke 3 -5, sampai dengan x>=y</li>
+                            </ol>
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="site-section">
+            <div class="container">
+                <div class="col-md-12">
+                    <h2 class="text-black text-center mb-10">Contoh:</h2>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-4">
+                        <p>Untuk menggambarkan algoritma Bressenham dalam pembentukan suatu lingkaran
+                            dengan titik pusat (0,0) dan radius 10, perhitungan berdasarkan pada oktan dari kuadran
+                            pertama dimana x =0 sampai x =y</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2 class="text-black">Penyelesaian:</h2>
+                        <p>
+                            (x0,y0) =(0,0) r = 10 <br> (x0,y0) = (0,10) 2x0 = 0, 2y0 = 20 <br> parameter p0 = 1-r = -9
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="images/ilustrasi_lingkaran4.PNG" alt="Image" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="site-section">
+            <div class="container">
+                <div class="col-md-12 text-center">
+                    <h2 class="text-black text-center mb-10">Hasil:</h2>
+                    <img src="images/ilustrasi_lingkaran5.PNG" alt="Image" class="img-fluid">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="row pt-5 mt-5 text-center">
+                <div class="col-md-12">
+                    <div class="border-top pt-5">
+                        <p>
+                            Copyright &copy;<script>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved | This website is made with <i class="icon-heart text-danger"
+                                aria-hidden="true"></i> by <a href="#" target="_blank">Fauzan & Zanuar</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.0.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/aos.js"></script>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
